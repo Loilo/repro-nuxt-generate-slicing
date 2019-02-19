@@ -1,0 +1,16 @@
+{
+  "name": "repro-nuxt-generate-slicing",
+  "version": "0.0.0",
+  "description": "Reproduction of nuxt/nuxt.js#4982",
+  "author": "Florian Reuschel <florian@loilo.de>",
+  "private": true,
+  "scripts": {
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.4.0",
+    "fs-extra": "^7.0.1",
+    "nodemon": "^1.18.9"
+  }
+}
