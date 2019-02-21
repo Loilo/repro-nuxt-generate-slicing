@@ -25,7 +25,7 @@ Take these notes with a grain of salt, as this was basically a blackbox test. Ho
   * It only occurs with a `/pages/index.vue`, not with any other pages.
   * It only occurs if an according `/pages/index` directory for nested routes exists.
   * It only occurs if that `index` directory contains an `index.vue`. The content of that file is irrelevant to the outcome.
-* Building behavior is kind of inconsistent. I assume that some caching is behind this which I'm not able to bypass.
+* Building behavior is kind of inconsistent. I'm assuming that some caching [or race condition](https://github.com/nuxt/nuxt.js/issues/4982#issuecomment-465741051) is behind this which I'm not able to bypass.
   * When `npm run generate` directory produced invalid HTML once, repeating the command will keep generating the same invalid HTML as long as the source doesn't change.
   * Very rarely, `npm run generate` will create *valid* HTML after source code in the `/pages` code changed.
     * I have no idea which kind of changes lead to this behavior.
